@@ -1,0 +1,192 @@
+/* VARIABLES */
+:root {
+	/* Colors */
+	--tryNow-buttonColor: rgba(236, 160, 014, 1);
+	--signUp-buttonColor: rgba(000, 208, 108, 0.7);
+	--image-overlayColor: rgba(009, 048, 186, 0.65);
+	--screen-bgroundColor: rgba(015, 040, 130, 1);
+	--content-textColor: rgba(255, 255, 255, 1);
+	/* Fonts */
+	--special-font: "Nunito", sans-serif;
+	--content-font: "Nunito Sans", sans-serif;
+}
+/* RESET DEFAULT STYLES */
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	font-size: 1rem;
+	box-sizing: border-box;
+}
+/* UTILITIES */
+a {
+	text-decoration: none;
+	color: var(--content-textColor);
+}
+li {
+	list-style: none;
+}
+body {
+	position: relative;
+	font-family: var(--content-font);
+	background-color: var(--screen-bgroundColor);
+	color: var(--content-textColor);
+}
+.bgImage {
+	position: relative;
+	z-index: -2;
+	width: 100%;
+	height: 100vh;
+	background-image: url(./images/yoga-5508336_1920.png);
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;
+	background-size: cover;
+	filter: saturate(0);
+}
+.overlay {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: var(--image-overlayColor);
+	z-index: -1;
+}
+.container {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.content {
+	position: relative;
+	width: 1160px;
+	height: 100vh;
+	margin: 0 auto;
+}
+.header {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 36px;
+	margin-top: 30px;
+}
+.logo {
+	display: inline-block;
+	width: 100px;
+	height: 100%;
+	font-family: var(--special-font);
+	font-size: 1.6rem;
+	font-weight: bolder;
+	line-height: 1.45;
+	text-align: center;
+	text-shadow: 1px 1px 5px var(--screen-bgroundColor);
+	border-radius: 25px;
+	box-shadow: 0 1px 10px var(--screen-bgroundColor);
+}
+.nav-bar {
+	width: 38%;
+	height: 100%;
+}
+.nav-bar ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.nav-bar ul li {
+	height: 100%;
+}
+.nav-bar ul li a {
+	display: inline-block;
+	height: 100%;
+	line-height: 2.2;
+	padding: 0 1.125rem;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 25px;
+	transition: all 0.5s ease-in;
+}
+.nav-bar ul li a:hover:not(#sign-up) {
+	background-color: rgba(200, 200, 200, 0.3);
+	border-radius: 25px;
+}
+#sign-up {
+	background-color: var(--signUp-buttonColor);
+	border-radius: 25px;
+}
+#sign-up:hover {
+	background-color: rgba(200, 200, 200, 0.3);
+}
+.wrapper h1 {
+	font-size: 3.12rem;
+	margin-top: 12.5rem;
+	background: #21ffcb;
+	background: -webkit-linear-gradient(
+		to right,
+		#21ffcb 0%,
+		#f58a82 35%,
+		#dee356 100%
+	);
+	background: -moz-linear-gradient(
+		to right,
+		#21ffcb 0%,
+		#f58a82 35%,
+		#dee356 100%
+	);
+	background: linear-gradient(to right, #21ffcb 0%, #f58a82 35%, #dee356 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.wrapper p {
+	width: 31rem;
+	font-size: 1.125rem;
+	line-height: 1.5;
+	margin-top: 1.88rem;
+}
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 23rem;
+	height: 3.125rem;
+	margin-top: 3.75rem;
+}
+.buttons a {
+	display: inline-block;
+	width: 10.5rem;
+	height: 100%;
+	font-weight: 600;
+	line-height: 3;
+	text-align: center;
+	border: 1px solid #fff;
+	border-radius: 25px;
+	transition: all 0.5s ease-in;
+}
+.buttons .try-now {
+	background-color: var(--tryNow-buttonColor);
+	border: 1px solid var(--tryNow-buttonColor);
+}
+.buttons .try-now:hover {
+	background-color: rgba(200, 200, 200, 0.3);
+	color: rgb(255, 252, 56);
+	border: 1px solid rgb(255, 252, 56);
+	cursor: pointer;
+}
+.buttons .sign-up:hover {
+	color: rgb(0, 255, 132);
+	border: 1px solid rgb(0, 255, 132);
+	background-color: rgba(200, 200, 200, 0.3);
+	cursor: pointer;
+}
